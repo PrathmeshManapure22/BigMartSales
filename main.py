@@ -9,7 +9,8 @@ import numpy as np
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
-# Function to extract text from different file types
+
+# Ensure the upload folder exists
 def extract_text_from_pdf(file_path):
     text = ""
     with open(file_path, 'rb') as file:
